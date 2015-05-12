@@ -1,0 +1,12 @@
+{{ Form::label(t('strings.content')) }}
+{{ Form::textarea('params[text]',$params['text'],['class'=>'tinyrte']) }}
+<script>
+    tinymce.init({
+        selector: "textarea.tinyrte",
+        relative_urls: false,
+        remove_script_host: false,
+        menubar:false,
+        statusbar: false,
+        toolbar: "bold italic | alignleft aligncenter alignright alignjustify | bullist numlist"
+    });
+</script>
